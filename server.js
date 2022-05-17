@@ -1,11 +1,10 @@
 // import Stripe from "stripe";
 // const stripe = new Stripe("sk_test_...");
+
 const stripe = require("stripe")(
   "sk_test_51Jiu0lC3QseEhbVaz6rfZ6wPOpZ5eSdNDGW59pXwS2JGCcKOXU0z4wkvFsStmlZ4kpyMuBh3yBDGYrQTYZQ8RuvX00fmWoA2Px"
 );
 var cors = require("cors");
-
-app.use(cors());
 
 const {
   createCustomer,
@@ -20,7 +19,7 @@ const create_checkout_session = require("./stripeSetup");
 
 const express = require("express");
 
-const app = express();
+app.use(cors());
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
