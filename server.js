@@ -3,6 +3,9 @@
 const stripe = require("stripe")(
   "sk_test_51Jiu0lC3QseEhbVaz6rfZ6wPOpZ5eSdNDGW59pXwS2JGCcKOXU0z4wkvFsStmlZ4kpyMuBh3yBDGYrQTYZQ8RuvX00fmWoA2Px"
 );
+var cors = require("cors");
+
+app.use(cors());
 
 const {
   createCustomer,
