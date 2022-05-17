@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Checkout</title>
+</head>
+
+<body>
+    <form>
+        <!-- Note: If using PHP set the action to /create-checkout-session.php -->
+
+        <input type="hidden" name="priceId" value="price_1KwBLnC3QseEhbVaC6eR5zsL" />
+        <button onClick={fetchAPI()} type="submit">Checkout</button>
+    </form>
+    <script>
+        const fetchAPI = () => {
+            fetch('http://localhost:3000/create-checkout-session').then(res => res.json()).then(data => console.log("DATA", data))
+        }
+    </script>
+</body>
+
+</html>
