@@ -49,6 +49,6 @@ app.get("/createToken", async (req, res) => {
   res.json({ token: charge });
 });
 
-app.listen(3000, () => {
-  console.log("LISTENING AT PORT", 3000);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("LISTENING AT PORT", process.env.PORT || 3000);
 });
